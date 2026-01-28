@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model paste {
+  id          String   @id @default(cuid())
+  content     String
+  created_at  DateTime @default(now())
+  max_views   Int?
+  ttl_seconds Int?
+  view_count  Int      @default(0)
+}

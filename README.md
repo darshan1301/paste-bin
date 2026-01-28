@@ -10,7 +10,7 @@ Create `.env`:
 DATABASE_URL=postgresql://user:password@localhost:5432/pastebin
 TEST_MODE=1
 BASE_URL=
-NEXT_BASE_URL
+NEXT_BASE_URL=
 ```
 
 Install + start:
